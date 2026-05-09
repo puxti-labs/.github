@@ -18,19 +18,16 @@ conversation instead of a surprise.
 
 ## Try it
 
-Puxti is in experimental preview (v0.x.x). If you'd like a trial key:
-
-👉 **[Request access at getpuxti.com](https://getpuxti.com/signup.html)**
-
-Then:
+Open source. Apache 2.0. Bring your own Anthropic API key for semantic reasoning.
 
 ```bash
 pip install puxti
-puxti auth          # paste your trial key
-puxti scan          # populate the Knowledge Graph
+puxti scan          # populate the Knowledge Graph from your dbt project
 puxti describe      # see what Puxti knows about your stack
 ```
-Full command reference in the [docs](https://getpuxti.com/docs.html).
+
+- 📦 [pypi.org/project/puxti](https://pypi.org/project/puxti/)
+- 🔧 [github.com/puxti-labs/puxti](https://github.com/puxti-labs/puxti)
 
 
 ---
@@ -114,13 +111,18 @@ spend more time on the part that's design.
 
 ## Status
 
-- **`puxti`** — v0.x.x on [PyPI](https://pypi.org/project/puxti/).
-  Experimental preview. CLI works; command surface will evolve.
-- Core commands today: `scan`, `describe`, `link`, `capture`, `redefine`,
-  `correct`, `purge`, `auth`, `config`, `health`. See the
-  [docs](https://getpuxti.com/docs.html) for reference.
+- **`puxti`** — v0.6.0 on [PyPI](https://pypi.org/project/puxti/).
+  Open source under Apache 2.0. API stabilizing as the project matures.
+- Core commands: `scan`, `describe`, `link`, `capture`, `redefine`,
+  `correct`, `purge`, `config`, `health`.
 - Scoping the first real milestone around a small number of end-to-end
   propagation paths.
+
+## Repositories
+
+- [**puxti**](https://github.com/puxti-labs/puxti) — the CLI
+- [**puxti-demo-project**](https://github.com/puxti-labs/puxti-demo-project) — sample dbt project for trying Puxti
+- [**airflow-demo-project**](https://github.com/puxti-labs/airflow-demo-project) — sample Airflow project showing cross-system links
 
 If you run a data team and this resonates, especially if you've lived
 the "what breaks when I rename this column" question, I would love to hear
