@@ -111,12 +111,11 @@ spend more time on the part that's design.
 
 ## Status
 
-- **`puxti`** — v0.6.0 on [PyPI](https://pypi.org/project/puxti/).
-  Open source under Apache 2.0. API stabilizing as the project matures.
+- **`puxti`** — v0.7.0 on [PyPI](https://pypi.org/project/puxti/).
+  Open source under Apache 2.0. No Docker, no external services — graph lives locally in SQLite.
 - Core commands: `scan`, `describe`, `link`, `capture`, `redefine`,
   `correct`, `purge`, `config`, `health`.
-- Scoping the first real milestone around a small number of end-to-end
-  propagation paths.
+- End-to-end propagation paths working. SQLite Knowledge Graph backend shipped in v0.7.0.
 
 ## Repositories
 
