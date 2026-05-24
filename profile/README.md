@@ -23,6 +23,7 @@ Open source. Apache 2.0. Bring your own Anthropic API key for semantic reasoning
 ```bash
 pip install puxti
 puxti scan          # populate the Knowledge Graph from your dbt project
+puxti impact model.jaffle_shop.orders  # blast radius before you change anything
 puxti describe      # see what Puxti knows about your stack
 ```
 
@@ -113,8 +114,10 @@ spend more time on the part that's design.
 
 - **`puxti`** — v0.7.0 on [PyPI](https://pypi.org/project/puxti/).
   Open source under Apache 2.0. No Docker, no external services — graph lives locally in SQLite.
-- Core commands: `scan`, `describe`, `link`, `capture`, `redefine`,
-  `correct`, `purge`, `config`, `health`.
+- Core commands: `scan`, `describe`, `link`, `capture`, `redefine`, `correct`, `purge`,
+  `config`, `health`, `impact`, `telemetry`.
+- **MCP server** — `puxti mcp serve` exposes four read-only tools to coding agents (Claude Code, Cursor).
+  Query the Knowledge Graph without leaving your IDE.
 - End-to-end propagation paths working. SQLite Knowledge Graph backend shipped in v0.7.0.
 
 ## Repositories
