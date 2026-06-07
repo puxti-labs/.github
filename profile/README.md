@@ -16,6 +16,10 @@ Rename a column. Redefine what *active user* means. Puxti finds everywhere
 it matters and opens PRs in the right repos, so the change becomes a
 conversation instead of a surprise.
 
+With `puxti mcp serve`, the same Knowledge Graph is available as an MCP
+server — so AI coding agents like Claude Code or Cursor can query blast
+radius before they touch anything.
+
 ## Try it
 
 Open source. Apache 2.0. Bring your own Anthropic API key for semantic reasoning.
@@ -23,8 +27,9 @@ Open source. Apache 2.0. Bring your own Anthropic API key for semantic reasoning
 ```bash
 pip install puxti
 puxti scan          # populate the Knowledge Graph from your dbt project
-puxti impact model.jaffle_shop.orders  # blast radius before you change anything
 puxti describe      # see what Puxti knows about your stack
+puxti impact model.jaffle_shop.orders  # blast radius before you change anything
+puxti mcp serve     # expose the graph as an MCP server for AI coding agents
 ```
 
 - 📦 [pypi.org/project/puxti](https://pypi.org/project/puxti/)
@@ -112,13 +117,12 @@ spend more time on the part that's design.
 
 ## Status
 
-- **`puxti`** — v0.7.0 on [PyPI](https://pypi.org/project/puxti/).
+- **`puxti`** — v0.8.0 on [PyPI](https://pypi.org/project/puxti/).
   Open source under Apache 2.0. No Docker, no external services — graph lives locally in SQLite.
 - Core commands: `scan`, `describe`, `link`, `capture`, `redefine`, `correct`, `purge`,
-  `config`, `health`, `impact`, `telemetry`.
+  `config`, `health`, `impact`, `telemetry`, `mcp`.
 - **MCP server** — `puxti mcp serve` exposes four read-only tools to coding agents (Claude Code, Cursor).
   Query the Knowledge Graph without leaving your IDE.
-- End-to-end propagation paths working. SQLite Knowledge Graph backend shipped in v0.7.0.
 
 ## Repositories
 
