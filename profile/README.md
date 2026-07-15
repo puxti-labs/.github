@@ -22,7 +22,7 @@ radius before they touch anything.
 
 ## Try it
 
-Open source. Apache 2.0. Bring your own Anthropic API key for semantic reasoning.
+Open source. Apache 2.0. Bring your own LLM key for semantic reasoning — Anthropic by default; OpenAI, Mistral, Gemini, AWS Bedrock, local Ollama, and more.
 
 ```bash
 pip install puxti
@@ -117,8 +117,10 @@ spend more time on the part that's design.
 
 ## Status
 
-- **`puxti`** — v0.8.0 on [PyPI](https://pypi.org/project/puxti/).
+- **`puxti`** — v0.10.0 on [PyPI](https://pypi.org/project/puxti/).
   Open source under Apache 2.0. No Docker, no external services — graph lives locally in SQLite.
+  Provider-agnostic BYOK: bring a key from Anthropic (default), OpenAI, Mistral, GLM,
+  DeepSeek, Groq, OpenRouter, Gemini, AWS Bedrock, or run local Ollama with no key at all.
 - Core commands: `scan`, `describe`, `link`, `capture`, `redefine`, `correct`, `purge`,
   `config`, `health`, `impact`, `telemetry`, `mcp`.
 - **MCP server** — `puxti mcp serve` exposes four read-only tools to coding agents (Claude Code, Cursor).
